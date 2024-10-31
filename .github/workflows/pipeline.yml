@@ -1,0 +1,31 @@
+name: Test Send Email
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-node:
+    runs-on: ubuntu-latest
+    container: node:14
+
+    steps:
+      - name: node version
+        run: node --version
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: send email
+        uses: dawidd6/action-send-mail@v2
+        with:
+          server_address: smtp.sendgrid.net
+          server_port: 587
+          username: ${{ secrets.SENDGRID_USER }}
+          password: ${{ secrets.SENDGRID_PASSWORD }}
+          subject: 'Test Email'
+          body: 'This is a test email'
+          to: lkingfrm@gmail.com
+          from: lxkdevtesting@gmail.com
+ 
