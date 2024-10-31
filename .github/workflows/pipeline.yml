@@ -27,5 +27,5 @@ jobs:
           subject: 'Test Email'
           body: 'This is a test email'
           to: lkingfrm@gmail.com
-          from: lxkdevtesting@gmail.com
+          # from: lxkdevtesting@gmail.com
  
