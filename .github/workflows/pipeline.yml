@@ -26,6 +26,6 @@ jobs:
           password: ${{ secrets.SENDGRID_PASSWORD }}
           subject: 'Test Email'
           body: 'This is a test email'
-          to: lkingfrm@gmail.com
-          # from: lxkdevtesting@gmail.com
+          to: 'lkingfrm@gmail.com'
+          from: 'lxkdevtesting@gmail.com'
  
